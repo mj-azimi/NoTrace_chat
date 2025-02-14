@@ -6,7 +6,6 @@ import (
 	"NoTrace/config"
 )
 
-// ساختار داده برای Chat
 type Chat struct {
 	ID        int
 	ME		  bool
@@ -78,7 +77,6 @@ func Delete(id int) {
 	db := config.Connect()
 	defer db.Close()
 
-	// حذف چت بر اساس ID
 	statement, err := db.Prepare("DELETE FROM chats WHERE id = ?")
 	if err != nil {
 		log.Fatal(err)

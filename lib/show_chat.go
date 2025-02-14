@@ -10,7 +10,6 @@ import (
 
 func ShowChat()  {
 	for {
-		// نمایش پیام‌های قبلی
 		chats := Chat.All(100)
 		for _, chat := range chats {
 			if chat.ME {
@@ -21,19 +20,16 @@ func ShowChat()  {
 			fmt.Println("---------------------")
 		}
 
-		// دریافت ورودی از کاربر
 		reader := bufio.NewReader(os.Stdin)
 		fmt.Print("Enter a message: ")
 		text, _ := reader.ReadString('\n')
 		text = strings.TrimSpace(text)
 
-		// اگر کاربر "exit" تایپ کرد، برنامه متوقف شود
 		if text == "exit" {
 			fmt.Println("Exiting...")
 			break
 		}
 
-		// ارسال درخواست
 		data := map[string]interface{}{
 			"message": text,
 		}

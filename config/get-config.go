@@ -24,7 +24,6 @@ func GetConfig(key string) string {
 		log.Fatalf("key %s not found in config", key)
 	}
 
-	// **تبدیل مقدار به string**
 	strValue, ok := value.(string)
 	if !ok {
 		log.Fatalf("key %s is not a string", key)

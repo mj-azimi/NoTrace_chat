@@ -1,0 +1,5 @@
+{
+    "db_name" : "chat.db",
+    "server_host" : ":8999" 
+}
+  

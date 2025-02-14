@@ -2,7 +2,7 @@ package lib
 
 import (
 	"NoTrace/config"
-	// Chat "NoTrace/model"
+	Chat "NoTrace/model"
 
 	"github.com/gin-gonic/gin"
 )
@@ -19,10 +19,17 @@ func Server() {
 			return
 		}
 		
-		// data := Chat.Chat{
+		message := jsonData["message"].(string)
 
-		// };
-		// Chat.Create(data)
-	})
+
+		data := Chat.Chat{
+			ClientID: 100, 
+			Text:     message, 
+			ME:       false, 
+		}
+		Chat.Create(data)
+		go ShowChat()
+
+		ctx.JSON(200, gin.H{"status": "success"})	})
 	server.Run(config.GetConfig("server_host"))
 }

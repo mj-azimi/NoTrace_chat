@@ -54,7 +54,7 @@ func All(client_id int) []Chat {
 	db := config.Connect()
 	defer db.Close()
 
-	rows, err := db.Query("SELECT id, client_id, text, created_at FROM chats WHERE client_id = ?", client_id)
+	rows, err := db.Query("SELECT id, me , client_id, text, created_at FROM chats WHERE client_id = ?", client_id)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -63,7 +63,7 @@ func All(client_id int) []Chat {
 	var chats []Chat
 	for rows.Next() {
 		var chat Chat
-		err := rows.Scan(&chat.ID, &chat.ClientID, &chat.Text, &chat.CreatedAt)
+		err := rows.Scan(&chat.ID,&chat.ME, &chat.ClientID, &chat.Text, &chat.CreatedAt)
 		if err != nil {
 			log.Fatal(err)
 		}

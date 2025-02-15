@@ -41,7 +41,7 @@ NoTrace does **not store chats on any external server**, making it **highly secu
     ```
         go build
     ```
-4. Adn run App
+4. And run App
     ```
         ./NoTrace
     ```

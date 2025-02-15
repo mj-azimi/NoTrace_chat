@@ -4,13 +4,13 @@ NoTrace is a lightweight chat system developed using **Go**, **Gin**, and **SQLi
 
 ---
 
-## 🔒 Privacy & Security
+##  Privacy & Security
 
 NoTrace does **not store chats on any external server**, making it **highly secure**. All messages are stored **locally** using SQLite, ensuring that no intermediary servers are needed for communication.
 
 ---
 
-## ✨ Features
+##  Features
 
 - Store and display messages using **SQLite**.
 - Command-line interface for message exchange.
@@ -21,7 +21,7 @@ NoTrace does **not store chats on any external server**, making it **highly secu
 
 ---
 
-## 🚀 Installation and Usage
+##  Installation and Usage
 
 ### Prerequisites
 - **Go** (version 1.19 or later).
@@ -46,7 +46,7 @@ NoTrace does **not store chats on any external server**, making it **highly secu
         ./NoTrace
     ```
 
-## 🔧 Project Structure
+##  Project Structure
     
         NoTrace/
         ├── bootstrap/       # Database initialization
@@ -60,9 +60,9 @@ NoTrace does **not store chats on any external server**, making it **highly secu
         ├── config.json      # Configuration file
         └── README.md        # This file
     
-### 📜 License
+###  License
 This project is licensed under the MIT License.
 
-## 📞 Contact
+##  Contact
 
 For suggestions or issues, please open an Issue on the GitHub repository!

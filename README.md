@@ -1,3 +1,5 @@
+![Image](https://s6.uupload.ir/files/screencast_from_25-02-15_14_56_04_mvwy.gif)
+
 # NoTrace - Chat System Based on Go and SQLite
 
 NoTrace is a lightweight chat system developed using **Go**, **Gin**, and **SQLite**. This project includes a **command-line interface** for sending and receiving messages, as well as a **RESTful API server** for managing chats.

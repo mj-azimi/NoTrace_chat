@@ -1,7 +1,7 @@
 package lib
 
 import (
-	Chat "NoTrace/model"
+	"NoTrace/database/chats"
 	"bytes"
 	"encoding/json"
 	"io"
@@ -33,12 +33,12 @@ func SendRequest(url string, jsonData map[string]interface{}) (string, error) {
 
 	message := jsonData["message"].(string)
 
-	data := Chat.Chat{
+	data := chats.Chat{
 		ClientID: 100, 
 		Text:     message, 
 		ME:       true, 
 	}
-	Chat.Create(data)
+	chats.Create(data)
 
 	return string(body), nil
 }

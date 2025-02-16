@@ -4,6 +4,11 @@
 
 NoTrace is a lightweight chat system developed using **Go**, **Gin**, and **SQLite**. This project includes a **command-line interface** for sending and receiving messages, as well as a **RESTful API server** for managing chats.
 
+
+## new Features
+- Ability to save contacts
+- Chat selection between brains
+
 ---
 
 ##  Privacy & Security

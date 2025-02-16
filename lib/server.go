@@ -2,9 +2,10 @@ package lib
 
 import (
 	"NoTrace/config"
-	Chat "NoTrace/model"
+	"NoTrace/database/chats"
 
 	"github.com/gin-gonic/gin"
+	"github.com/inancgumus/screen"
 )
 
 func Server() {
@@ -22,14 +23,17 @@ func Server() {
 		message := jsonData["message"].(string)
 
 
-		data := Chat.Chat{
+		data := chats.Chat{
 			ClientID: 100, 
 			Text:     message, 
 			ME:       false, 
 		}
-		Chat.Create(data)
-		go ShowChat()
+		chats.Create(data)
+		screen.Clear()
+		screen.MoveTopLeft()
+		go ShowChat(1)
 
-		ctx.JSON(200, gin.H{"status": "success"})	})
+		ctx.JSON(200, gin.H{"status": "success"})	
+	})
 	server.Run(config.GetConfig("server_host"))
 }

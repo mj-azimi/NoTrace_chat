@@ -1,4 +1,4 @@
-package Chat
+package chats
 
 import (
 	"database/sql"

@@ -8,6 +8,7 @@ NoTrace is a lightweight chat system developed using **Go**, **Gin**, and **SQLi
 ## new Features
 - Ability to save contacts
 - Chat selection between brains
+- Fix bugs
 
 ---
 

@@ -57,7 +57,7 @@ func main() {
 
 			var ip, client string
 
-			fmt.Println("enter new ip and port: \n (sample: 1.1.1.1:1234)")
+			fmt.Println("enter new ip and port: \n (sample: http://127.0.0.1:1234)")
 			fmt.Scanln(&ip)
 
 			fmt.Println("Enter the user name:")

@@ -6,6 +6,8 @@ import (
 	"encoding/json"
 	"io"
 	"net/http"
+
+	"github.com/inancgumus/screen"
 )
 
 func SendRequest(url string, jsonData map[string]interface{}) (string, error) {
@@ -40,5 +42,7 @@ func SendRequest(url string, jsonData map[string]interface{}) (string, error) {
 	}
 	chats.Create(data)
 
+	screen.Clear()
+	screen.MoveTopLeft()
 	return string(body), nil
 }

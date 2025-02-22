@@ -1,9 +1,9 @@
 package clients
 
 import (
+	"NoTrace_chat/config"
 	"database/sql"
 	"log"
-	"NoTrace/config"
 )
 
 type Client struct {

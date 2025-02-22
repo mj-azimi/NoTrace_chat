@@ -1,9 +1,9 @@
 package chats
 
-import "NoTrace/config"
+import "NoTrace_chat/config"
 
-func Migration(){
-	db := config.Connect();
+func Migration() {
+	db := config.Connect()
 	defer db.Close()
 
 	createTableSQL := `
@@ -16,5 +16,3 @@ func Migration(){
 	);`
 	db.Exec(createTableSQL)
 }
-
-

@@ -1,12 +1,11 @@
 package database
 
 import (
-	"NoTrace/database/chats"
-	"NoTrace/database/clients"
+	"NoTrace_chat/database/chats"
+	"NoTrace_chat/database/clients"
 )
 
-func Handle(){
+func Handle() {
 	clients.Migration()
 	chats.Migration()
 }
-

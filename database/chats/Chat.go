@@ -1,14 +1,14 @@
 package chats
 
 import (
+	"NoTrace_chat/config"
 	"database/sql"
 	"log"
-	"NoTrace/config"
 )
 
 type Chat struct {
 	ID        int
-	ME		  bool
+	ME        bool
 	ClientID  int
 	Text      string
 	CreatedAt string
@@ -30,7 +30,6 @@ func Create(chat Chat) {
 
 }
 
-
 func FindById(id int) *Chat {
 	db := config.Connect()
 	defer db.Close()
@@ -40,14 +39,13 @@ func FindById(id int) *Chat {
 	err := row.Scan(&chat.ID, &chat.ClientID, &chat.Text, &chat.CreatedAt)
 	if err != nil {
 		if err == sql.ErrNoRows {
-			return nil 
+			return nil
 		} else {
 			log.Fatal(err)
 		}
 	}
 	return &chat
 }
-
 
 func All(client_id int) []Chat {
 	db := config.Connect()
@@ -62,7 +60,7 @@ func All(client_id int) []Chat {
 	var chats []Chat
 	for rows.Next() {
 		var chat Chat
-		err := rows.Scan(&chat.ID,&chat.ME, &chat.ClientID, &chat.Text, &chat.CreatedAt)
+		err := rows.Scan(&chat.ID, &chat.ME, &chat.ClientID, &chat.Text, &chat.CreatedAt)
 		if err != nil {
 			log.Fatal(err)
 		}
@@ -71,7 +69,6 @@ func All(client_id int) []Chat {
 
 	return chats
 }
-
 
 func Delete(id int) {
 	db := config.Connect()

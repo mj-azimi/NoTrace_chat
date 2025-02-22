@@ -1,18 +1,18 @@
 package lib
 
 import (
-	"NoTrace/database/chats"
-	"NoTrace/database/clients"
+	"NoTrace_chat/database/chats"
+	"NoTrace_chat/database/clients"
 	"bufio"
 	"fmt"
 	"os"
 	"strings"
 )
 
-func ShowChat(client_id int)  {
+func ShowChat(client_id int) {
 	client := clients.FindById(client_id)
 
-	fmt.Println("💬chat by ",client.Name)
+	fmt.Println("💬chat by ", client.Name)
 	for {
 		chats := chats.All(100)
 		for _, chat := range chats {
@@ -37,5 +37,6 @@ func ShowChat(client_id int)  {
 		data := map[string]interface{}{
 			"message": text,
 		}
-		SendRequest(client.IP+"/get_text", data)	}
+		SendRequest(client.IP+"/get_text", data)
+	}
 }

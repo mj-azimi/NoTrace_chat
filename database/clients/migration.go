@@ -1,9 +1,9 @@
 package clients
 
-import "NoTrace/config"
+import "NoTrace_chat/config"
 
-func Migration(){
-	db := config.Connect();
+func Migration() {
+	db := config.Connect()
 	defer db.Close()
 
 	createTableSQL := `

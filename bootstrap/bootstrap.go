@@ -1,7 +1,7 @@
 package bootstrap
 
-import "NoTrace/database"
+import "NoTrace_chat/database"
 
-func Boot()  {
+func Boot() {
 	database.Handle()
 }

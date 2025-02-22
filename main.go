@@ -1,9 +1,9 @@
 package main
 
 import (
-	"NoTrace/bootstrap"
-	"NoTrace/database/clients"
-	"NoTrace/lib"
+	"NoTrace_chat/bootstrap"
+	"NoTrace_chat/database/clients"
+	"NoTrace_chat/lib"
 	"fmt"
 	"time"
 
@@ -31,7 +31,7 @@ func main() {
 		if num == 0 {
 			clientsData := clients.All()
 			var cl []string
-			clientIDMap := make(map[int]int) 
+			clientIDMap := make(map[int]int)
 
 			for index, client := range clientsData {
 				cl = append(cl, fmt.Sprintf("%s *** %s", client.Name, client.IP))

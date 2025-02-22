@@ -1,4 +1,4 @@
-module NoTrace
+module NoTrace_chat
 
 // module gitlab.com/pragmaticreviews/golang-gin-poc
 

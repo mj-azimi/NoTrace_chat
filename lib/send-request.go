@@ -1,7 +1,7 @@
 package lib
 
 import (
-	"NoTrace/database/chats"
+	"NoTrace_chat/database/chats"
 	"bytes"
 	"encoding/json"
 	"io"
@@ -36,9 +36,9 @@ func SendRequest(url string, jsonData map[string]interface{}) (string, error) {
 	message := jsonData["message"].(string)
 
 	data := chats.Chat{
-		ClientID: 100, 
-		Text:     message, 
-		ME:       true, 
+		ClientID: 100,
+		Text:     message,
+		ME:       true,
 	}
 	chats.Create(data)
 

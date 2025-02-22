@@ -14,7 +14,7 @@ NoTrace is a lightweight chat system developed using **Go**, **Gin**, and **SQLi
 
 ##  Privacy & Security
 
-NoTrace does **not store chats on any external server**, making it **highly secure**. All messages are stored **locally** using SQLite, ensuring that no intermediary servers are needed for communication.
+NoTrace_chat does **not store chats on any external server**, making it **highly secure**. All messages are stored **locally** using SQLite, ensuring that no intermediary servers are needed for communication.
 
 ---
 
@@ -37,8 +37,8 @@ NoTrace does **not store chats on any external server**, making it **highly secu
 ### Steps to Run the Project
 1. Clone the repository:
    ```sh
-   git clone https://github.com/mj-azimi/NoTrace.git
-   cd NoTrace
+   git clone https://github.com/mj-azimi/NoTrace_chat.git
+   cd NoTrace_chat
    ```
 2. Install dependencies:
 
@@ -51,12 +51,12 @@ NoTrace does **not store chats on any external server**, making it **highly secu
     ```
 4. And run App
     ```
-        ./NoTrace
+        ./NoTrace_chat
     ```
 
 ##  Project Structure
     
-        NoTrace/
+        NoTrace_chat/
         ├── bootstrap/       # Database initialization
         ├── config/          # Configuration management and database connection
         ├── database/        # SQLite database handling

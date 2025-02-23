@@ -2,9 +2,12 @@ package main
 
 import (
 	"NoTrace_chat/bootstrap"
+	"NoTrace_chat/config"
 	"NoTrace_chat/database/clients"
 	"NoTrace_chat/lib"
 	"fmt"
+	"os/exec"
+	"strings"
 	"time"
 
 	"github.com/inancgumus/screen"
@@ -12,9 +15,23 @@ import (
 )
 
 func main() {
+
 	for {
 		screen.MoveTopLeft()
 
+
+		out, err := exec.Command("hostname", "-I").Output()
+		if err != nil {
+			fmt.Println("err :", err)
+			return
+		}
+		println("\n \n \a");
+
+		ips := strings.Fields(string(out))
+		fmt.Println("🌐 IPs:", ips)
+
+		fmt.Println("📡 PORT :", config.GetConfig("server_host") )
+		
 		bootstrap.Boot()
 
 		prompt := promptui.Select{
